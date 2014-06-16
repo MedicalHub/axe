@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         jshint: {
-            all: ['*.js', '**/*.js'],
+            all: ['*.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     reporter: 'spec'
                 },
                 src: [
-                    'test/test.js'
+                    'test.js'
                 ]
             }
         }
@@ -26,5 +26,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
 
     // Default task(s).
-    grunt.registerTask('test', ['jshint', 'mochaTest']);
+    grunt.registerTask('default', ['jshint', 'mochaTest']);
 };
