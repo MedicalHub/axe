@@ -9,6 +9,10 @@
   "keywords": [
     "logging"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whiteout-io/axe.git"
+  },
   "author": "Felix Hammerl",
   "license": "MIT",
   "devDependencies": {
