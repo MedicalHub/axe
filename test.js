@@ -26,51 +26,55 @@ describe('Axe Unit Tests', function() {
     });
 
     it('should log', function() {
-        axe.removeAppender(axe.defaultAppender);
-
         axe.debug('asd');
         expect(axe.logs[0][0]).to.equal(axe.DEBUG);
-        expect(axe.logs[0][1]).to.not.exist;
-        expect(axe.logs[0][2]).to.equal('asd');
+        expect(axe.logs[0][1]).to.be.instanceof(Date);
+        expect(axe.logs[0][2]).to.not.exist;
+        expect(axe.logs[0][3]).to.equal('asd');
 
         axe.info('asd');
         expect(axe.logs[1][0]).to.equal(axe.INFO);
-        expect(axe.logs[1][1]).to.not.exist;
-        expect(axe.logs[1][2]).to.equal('asd');
+        expect(axe.logs[1][1]).to.be.instanceof(Date);
+        expect(axe.logs[1][2]).to.not.exist;
+        expect(axe.logs[1][3]).to.equal('asd');
 
         axe.warn('asd');
         expect(axe.logs[2][0]).to.equal(axe.WARN);
-        expect(axe.logs[2][1]).to.not.exist;
-        expect(axe.logs[2][2]).to.equal('asd');
+        expect(axe.logs[2][1]).to.be.instanceof(Date);
+        expect(axe.logs[2][2]).to.not.exist;
+        expect(axe.logs[2][3]).to.equal('asd');
 
         axe.error('asd');
         expect(axe.logs[3][0]).to.equal(axe.ERROR);
-        expect(axe.logs[3][1]).to.not.exist;
-        expect(axe.logs[3][2]).to.equal('asd');
+        expect(axe.logs[3][1]).to.be.instanceof(Date);
+        expect(axe.logs[3][2]).to.not.exist;
+        expect(axe.logs[3][3]).to.equal('asd');
     });
 
     it('should log with module', function() {
-        axe.removeAppender(axe.defaultAppender);
-
         axe.debug('my module', 'asd');
         expect(axe.logs[0][0]).to.equal(axe.DEBUG);
-        expect(axe.logs[0][1]).to.equal('my module');
-        expect(axe.logs[0][2]).to.equal('asd');
+        expect(axe.logs[0][1]).to.be.instanceof(Date);
+        expect(axe.logs[0][2]).to.equal('my module');
+        expect(axe.logs[0][3]).to.equal('asd');
 
         axe.info('my module', 'asd');
         expect(axe.logs[1][0]).to.equal(axe.INFO);
-        expect(axe.logs[1][1]).to.equal('my module');
-        expect(axe.logs[1][2]).to.equal('asd');
+        expect(axe.logs[1][1]).to.be.instanceof(Date);
+        expect(axe.logs[1][2]).to.equal('my module');
+        expect(axe.logs[1][3]).to.equal('asd');
 
         axe.warn('my module', 'asd');
         expect(axe.logs[2][0]).to.equal(axe.WARN);
-        expect(axe.logs[2][1]).to.equal('my module');
-        expect(axe.logs[2][2]).to.equal('asd');
+        expect(axe.logs[2][1]).to.be.instanceof(Date);
+        expect(axe.logs[2][2]).to.equal('my module');
+        expect(axe.logs[2][3]).to.equal('asd');
 
         axe.error('my module', 'asd');
         expect(axe.logs[3][0]).to.equal(axe.ERROR);
-        expect(axe.logs[3][1]).to.equal('my module');
-        expect(axe.logs[3][2]).to.equal('asd');
+        expect(axe.logs[3][1]).to.be.instanceof(Date);
+        expect(axe.logs[3][2]).to.equal('my module');
+        expect(axe.logs[3][3]).to.equal('asd');
     });
 
     it('should dump logs', function() {
