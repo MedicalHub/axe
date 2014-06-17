@@ -2,9 +2,13 @@
     'use strict';
 
     if (typeof define === 'function' && define.amd) {
-        define([], factory.bind(window.console));
+        define([], function() {
+            return factory(window.console);
+        });
     } else if (typeof exports === 'object') {
         module.exports = factory(console);
+    } else {
+        root.axe = factory(window.console);
     }
 }(this, function(console) {
     'use strict';
