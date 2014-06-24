@@ -25,7 +25,7 @@ A lightweight logger as UMD module with multiple appenders.
     axe.defaultAppender // logs to the console
 
     var appender = {
-        log: function(level, component, message) {
+        log: function(level, date, component, message) {
             // do stuff
         }
     }    
