@@ -20,6 +20,9 @@ A lightweight logger as UMD module with multiple appenders.
     axe.INFO
     axe.WARN
     axe.ERROR
+    
+    // change the log level
+    axe.logLevel = axe.DEBUG; // this is the default
 
     // appenders
     axe.defaultAppender // logs to the console
