@@ -1,5 +1,6 @@
 {
-  "name": "axe",
+
+  "name": "axe-logger",
   "version": "0.0.2",
   "description": "A lightweight logger with multiple appenders",
   "main": "axe.js",
